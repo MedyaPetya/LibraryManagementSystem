@@ -5,7 +5,7 @@ public class Book {
     private String title;
     private String author;
     private double price;
-    private String category; // Новое поле
+    private String category;
     private boolean isAvailable;
 
     public Book(int id, String title, String author, double price, String category, boolean isAvailable) {
@@ -25,8 +25,7 @@ public class Book {
 
     @Override
     public String toString() {
-        // Красивый вывод с категорией
-        return String.format("[%s] ID:%d \"%s\" - %s ($%.2f) | Доступна: %s",
-                category, id, title, author, price, (isAvailable ? "ДА" : "НЕТ"));
+        return String.format("[%s] ID:%d \"%s\" - %s ($%.2f) | Available: %s",
+                category, id, title, author, price, (isAvailable ? "YES" : "NO"));
     }
 }
